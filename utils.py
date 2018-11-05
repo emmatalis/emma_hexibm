@@ -15,10 +15,8 @@ class Random36(random.Random):
 
     def choices(self, population, weights=None, *, cum_weights=None, k=1):
         """Return a k sized list of population elements chosen with replacement.
-
         If the relative weights or cumulative weights are not specified,
         the selections are made with equal probability.
-
         """
         random = self.random
         if cum_weights is None:
@@ -66,12 +64,10 @@ def convert_size(size_bytes):
 
 class HexNeighbors:
     """ Provides methods to get the indicies of neighboring cells in hexagonal grid
-
     Methods for finding neighbors in a hexgaonal grid. Assumes hexgonal grid uses
     axial coordinate system x,y,z (http://www.redblobgames.com/grids/hexagons/#coordinates).
     Coordinates are calculated for a rings of hexagons, with caching to speed the process
     for repeat calls to the class.
-
     """
 
     def __init__(self):
@@ -133,7 +129,6 @@ class IncrementOutputFile:
 
     def __init__(self, base: str, ndigits: int = 3, ext: str = '', sep: str = '_', warn: bool = False):
         """
-
         :param base:
         :param ndigits:
         :param ext:

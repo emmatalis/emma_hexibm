@@ -1,0 +1,2 @@
+{'path': 'output/1', 'kernel_size': 1, 'vital_var': 0.5}
+1

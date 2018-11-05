@@ -1,0 +1,6 @@
+Setting output to output/76
+establishing simulation
+simulation established
+seeding simulation
+an error occured
+a <= 0
