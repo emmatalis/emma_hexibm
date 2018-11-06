@@ -557,7 +557,7 @@ class SimulationManager:
         with open(path,'a') as f:
             writer = csv.writer(f)
             for agent in self.agents:
-                writer.writerow([agent.hex.axial_coords])
+                writer.writerow([agent.hex.axial_coords]+[agent.age]) # added age
 
 
 
@@ -655,11 +655,12 @@ if __name__ == '__main__':
     # for 10 reps. To change the model thats run, fill 'jobs'
     # with dictionaries of parameters.
     # Currently params can be kernel_size, vital_var, path,
-    for rep in range(10):
-        for k in range(10):
-            params = {'path':op(),'kernel_size':(1+k),'vital_var':float(args.variance)}
-            jobs.append(params)
-
+    
+    #for rep in range(10):
+        #for k in range(10):
+            #params = {'path':op(),'kernel_size':(1+k),'vital_var':float(args.variance)}
+            #jobs.append(params)
+    jobs = [{'path':op(),'timesteps':50}] 
     # Logging info
     with open('logfile.txt', 'a') as log:
         print(jobs, file=log)
